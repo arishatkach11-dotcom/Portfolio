@@ -11,7 +11,7 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* ----- БАЗА И ПЕРЕМЕННЫЕ (светло-фиолетовая гамма) ----- */
+    /* ----- БАЗА И ПЕРЕМЕННЫЕ (тёмная гамма) ----- */
     * {
       margin: 0;
       padding: 0;
@@ -19,19 +19,19 @@
     }
 
     :root {
-      --bg-light: #f8f5ff;
-      --bg-card: #ffffff;
-      --bg-soft: #f3efff;
-      --text-dark: #2a2440;
-      --text-soft: #5a5270;
+      --bg-dark: #0d0b14;
+      --bg-card: #16121f;
+      --bg-soft: #1f1a2e;
+      --text-light: #f0edf5;
+      --text-soft: #b8b0cc;
       --text-muted: #8a82a0;
-      --accent-lavender: #c9b8ff;
-      --accent-lilac: #b8a5f0;
-      --accent-purple: #9b87d4;
-      --accent-deep: #7b6bb0;
-      --border-soft: rgba(180, 160, 220, 0.2);
-      --shadow-soft: 0 12px 30px rgba(120, 100, 180, 0.08);
-      --shadow-hover: 0 20px 40px rgba(120, 100, 180, 0.15);
+      --accent-lavender: #b8a5f0;
+      --accent-lilac: #9b87d4;
+      --accent-purple: #7b6bb0;
+      --accent-deep: #c9b8ff;
+      --border-soft: rgba(180, 160, 220, 0.15);
+      --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.5);
+      --shadow-hover: 0 20px 40px rgba(120, 100, 180, 0.25);
       --transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
     }
 
@@ -41,8 +41,8 @@
 
     body {
       font-family: 'Quicksand', sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-dark);
+      background-color: var(--bg-dark);
+      color: var(--text-light);
       line-height: 1.6;
     }
 
@@ -121,14 +121,14 @@
     .btn-primary {
       background: var(--accent-lavender);
       border-color: var(--accent-lavender);
-      color: #2a2440;
+      color: #0d0b14;
     }
 
     .btn-primary:hover {
       background: transparent;
-      color: var(--accent-deep);
-      border-color: var(--accent-deep);
-      box-shadow: 0 8px 20px rgba(123, 107, 176, 0.2);
+      color: var(--accent-lavender);
+      border-color: var(--accent-lavender);
+      box-shadow: 0 8px 25px rgba(184, 165, 240, 0.25);
     }
 
     .btn-outline {
@@ -139,7 +139,7 @@
     .btn-outline:hover {
       background: var(--accent-lavender);
       border-color: var(--accent-lavender);
-      color: #2a2440;
+      color: #0d0b14;
     }
 
     /* ===== HERO ===== */
@@ -147,7 +147,7 @@
       min-height: 90vh;
       display: flex;
       align-items: center;
-      background: linear-gradient(145deg, #f5f0ff 0%, #ede7ff 100%);
+      background: radial-gradient(ellipse at 30% 20%, #1f1a2e 0%, #0d0b14 70%);
       position: relative;
       overflow: hidden;
       padding: 2rem 0;
@@ -160,7 +160,7 @@
       right: -10%;
       width: 70%;
       height: 150%;
-      background: radial-gradient(circle at 70% 40%, rgba(201, 184, 255, 0.2) 0%, transparent 60%);
+      background: radial-gradient(circle at 70% 40%, rgba(184, 165, 240, 0.08) 0%, transparent 60%);
       pointer-events: none;
     }
 
@@ -176,14 +176,14 @@
 
     .hero-text .badge {
       display: inline-block;
-      background: rgba(201, 184, 255, 0.25);
+      background: rgba(184, 165, 240, 0.15);
       padding: 0.3rem 1.4rem;
       border-radius: 40px;
       font-size: 0.8rem;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--accent-deep);
-      border: 1px solid rgba(155, 135, 212, 0.2);
+      color: var(--accent-lavender);
+      border: 1px solid rgba(184, 165, 240, 0.2);
       backdrop-filter: blur(4px);
       margin-bottom: 1rem;
     }
@@ -195,7 +195,7 @@
     .hero-text h1 i {
       font-style: italic;
       font-weight: 400;
-      color: var(--accent-deep);
+      color: var(--accent-lavender);
     }
 
     .hero-text .subhead {
@@ -223,27 +223,32 @@
       width: 100%;
       max-width: 400px;
       aspect-ratio: 4/5;
-      background: linear-gradient(145deg, #ede7ff, #e5dcfa);
+      background: linear-gradient(145deg, #1f1a2e, #16121f);
       border-radius: 60px 60px 60px 12px;
       box-shadow: var(--shadow-soft);
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
-      padding: 1rem;
-      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 0;
+      border: 1px solid rgba(184, 165, 240, 0.15);
       transition: var(--transition);
+      overflow: hidden;
+      position: relative;
     }
 
     .dancer-illustration:hover {
       transform: translateY(-6px) scale(1.01);
       box-shadow: var(--shadow-hover);
+      border-color: var(--accent-lavender);
     }
 
-    .dancer-illustration svg {
-      width: 80%;
-      height: 90%;
-      opacity: 0.85;
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.05));
+    .dancer-illustration img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      border-radius: inherit;
+      display: block;
     }
 
     .accent-line {
@@ -254,10 +259,10 @@
       margin: 0.5rem 0 1.2rem 0;
     }
 
-    /* ===== SKILLS (ОБНОВЛЁННЫЕ) ===== */
+    /* ===== SKILLS ===== */
     .skills {
       padding: 5rem 0;
-      background: #ffffff;
+      background: var(--bg-dark);
       border-top: 1px solid var(--border-soft);
       border-bottom: 1px solid var(--border-soft);
     }
@@ -270,7 +275,7 @@
     }
 
     .skill-item {
-      background: var(--bg-light);
+      background: var(--bg-card);
       padding: 2rem 1.5rem;
       border-radius: 28px;
       text-align: center;
@@ -287,7 +292,7 @@
 
     .skill-item .icon {
       font-size: 2.8rem;
-      color: var(--accent-deep);
+      color: var(--accent-lavender);
       margin-bottom: 0.8rem;
       display: inline-block;
     }
@@ -297,18 +302,19 @@
       font-weight: 600;
       font-size: 1.2rem;
       margin-bottom: 0.3rem;
+      color: var(--text-light);
     }
 
     .skill-item .level {
       display: inline-block;
-      background: rgba(201, 184, 255, 0.2);
+      background: rgba(184, 165, 240, 0.15);
       padding: 0.15rem 1rem;
       border-radius: 30px;
       font-size: 0.7rem;
       letter-spacing: 0.5px;
       text-transform: uppercase;
-      color: var(--accent-deep);
-      border: 1px solid rgba(155, 135, 212, 0.15);
+      color: var(--accent-lavender);
+      border: 1px solid rgba(184, 165, 240, 0.15);
       margin-top: 0.3rem;
     }
 
@@ -318,10 +324,10 @@
       margin-top: 0.6rem;
     }
 
-    /* ===== ABOUT ===== */
+    /* ===== ABOUT (С ИЗОБРАЖЕНИЕМ uva.jpg) ===== */
     .about {
       padding: 5rem 0;
-      background: var(--bg-light);
+      background: var(--bg-soft);
       border-bottom: 1px solid var(--border-soft);
     }
 
@@ -340,7 +346,7 @@
     }
 
     .about-text strong {
-      color: var(--text-dark);
+      color: var(--text-light);
       font-weight: 600;
     }
 
@@ -358,7 +364,7 @@
     .stat-number {
       font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
-      color: var(--accent-deep);
+      color: var(--accent-lavender);
       line-height: 1;
     }
 
@@ -370,28 +376,38 @@
       margin-top: 0.2rem;
     }
 
+    /* ============================================================
+       ИЗОБРАЖЕНИЕ uva.jpg В РАЗДЕЛЕ «ОБО МНЕ»
+       НАСТРОЕНО, ЧТОБЫ НЕ ВЫХОДИТЬ ЗА РАМКИ
+       ============================================================ */
     .about-image {
       border-radius: 30px;
-      background: #ede7ff;
+      background: var(--bg-card);
       min-height: 240px;
       display: flex;
       align-items: center;
       justify-content: center;
       border: 1px solid var(--border-soft);
       box-shadow: var(--shadow-soft);
-      padding: 1.5rem;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
     }
 
-    .about-image svg {
+    .about-image img {
       width: 100%;
-      max-height: 220px;
-      opacity: 0.6;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      border-radius: inherit;
+      display: block;
+      min-height: 240px;
     }
 
     /* ===== CONTACT / FOOTER ===== */
     .contact {
       padding: 4rem 0 3rem;
-      background: #ffffff;
+      background: var(--bg-dark);
       text-align: center;
     }
 
@@ -410,31 +426,31 @@
     }
 
     .social-links a:hover {
-      color: var(--accent-deep);
+      color: var(--accent-lavender);
       transform: translateY(-5px) scale(1.08);
     }
 
     .contact-email {
       font-size: 1.05rem;
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.04);
       padding: 0.6rem 2.2rem;
       border-radius: 60px;
       border: 1px solid var(--border-soft);
       display: inline-block;
       backdrop-filter: blur(4px);
       transition: var(--transition);
-      color: var(--text-dark);
+      color: var(--text-light);
     }
 
     .contact-email:hover {
       border-color: var(--accent-lavender);
-      background: #ffffff;
+      background: rgba(184, 165, 240, 0.08);
       box-shadow: var(--shadow-soft);
     }
 
     .contact-email i {
       margin-right: 10px;
-      color: var(--accent-deep);
+      color: var(--accent-lavender);
     }
 
     .footer-copy {
@@ -498,6 +514,14 @@
       .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       }
+
+      .about-image {
+        max-height: 300px;
+      }
+
+      .about-image img {
+        min-height: 200px;
+      }
     }
 
     @media (max-width: 600px) {
@@ -523,6 +547,14 @@
       .skills-grid {
         grid-template-columns: 1fr 1fr;
       }
+
+      .about-image {
+        max-height: 250px;
+      }
+
+      .about-image img {
+        min-height: 180px;
+      }
     }
 
     @media (max-width: 400px) {
@@ -538,7 +570,7 @@
   <section class="hero" id="home">
     <div class="container hero-content">
       <div class="hero-text">
-        <span class="badge"><i class="fas fa-circle" style="font-size: 0.4rem; vertical-align: middle; margin-right: 6px; color: var(--accent-deep);"></i> начинающий танцор</span>
+        <span class="badge"><i class="fas fa-circle" style="font-size: 0.4rem; vertical-align: middle; margin-right: 6px; color: var(--accent-lavender);"></i> начинающий танцор</span>
         <h1>
           Ткач<br />
           <i>Арина</i>
@@ -555,19 +587,13 @@
       </div>
       <div class="hero-visual">
         <div class="dancer-illustration">
-          <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100 30 C80 30 60 48 60 75 C60 95 70 110 85 120 C95 127 105 127 115 120 C130 110 140 95 140 75 C140 48 120 30 100 30Z" fill="#9b87d4" opacity="0.4"/>
-            <path d="M85 120 C85 135 75 155 60 175 C50 190 40 205 35 225 L50 230 C55 210 65 195 75 180 L90 155 L100 165 L110 155 L125 180 C135 195 145 210 150 230 L165 225 C160 205 150 190 140 175 C125 155 115 135 115 120" fill="#9b87d4" opacity="0.35"/>
-            <path d="M100 165 L100 225 L85 265 L95 270 L100 235 L105 270 L115 265 L100 225" fill="#9b87d4" opacity="0.35"/>
-            <circle cx="100" cy="90" r="8" fill="#2a2440" opacity="0.15"/>
-            <path d="M60 65 C45 70 35 85 40 105" stroke="#b8a5f0" stroke-width="2" opacity="0.4" stroke-dasharray="4 4"/>
-          </svg>
+          <img src="ava.jpg" alt="Арина Ткач — танцор">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SKILLS (ОБНОВЛЁННЫЕ) ===== -->
+  <!-- ===== SKILLS ===== -->
   <section class="skills" id="skills">
     <div class="container">
       <div class="section-title-center">
@@ -575,49 +601,42 @@
         <p style="color: var(--text-muted); margin-top: 0.3rem;">Чему я учусь и что уже умею</p>
       </div>
       <div class="skills-grid">
-        <!-- Hip-Hop -->
         <div class="skill-item">
           <div class="icon"><i class="fas fa-fire"></i></div>
           <h3>Hip-Hop</h3>
           <span class="level">средний</span>
           <p>Бит, грув, изоляция, работа корпусом.</p>
         </div>
-        <!-- Girly -->
         <div class="skill-item">
           <div class="icon"><i class="fas fa-venus"></i></div>
           <h3>Girly</h3>
           <span class="level">продолжающий</span>
           <p>Пластика, женственность, динамика рук и бёдер.</p>
         </div>
-        <!-- House (НОВЫЙ) -->
         <div class="skill-item">
           <div class="icon"><i class="fas fa-house-chimney"></i></div>
           <h3>House</h3>
           <span class="level">начальный</span>
           <p>Ритмичные шаги, работа стоп, музыкальность.</p>
         </div>
-        <!-- Jazz Funk (заменён) -->
         <div class="skill-item">
           <div class="icon"><i class="fas fa-star"></i></div>
           <h3>Jazz Funk</h3>
           <span class="level">средний</span>
           <p>Энергия, акценты, сценический образ.</p>
         </div>
-        <!-- Ритмика & музыкальность -->
         <div class="skill-item">
           <div class="icon"><i class="fas fa-clock"></i></div>
           <h3>Ритмика &amp; музыкальность</h3>
           <span class="level">средний</span>
           <p>Чувство такта, работа с акцентами.</p>
         </div>
-        <!-- Работа в группе -->
         <div class="skill-item">
           <div class="icon"><i class="fas fa-people-arrows"></i></div>
           <h3>Работа в группе</h3>
           <span class="level">продолжающий</span>
           <p>Синхрон, взаимодействие, поддержка.</p>
         </div>
-        <!-- Сценическое движение -->
         <div class="skill-item">
           <div class="icon"><i class="fas fa-film"></i></div>
           <h3>Сценическое движение</h3>
@@ -628,14 +647,14 @@
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
+  <!-- ===== ABOUT (С ИЗОБРАЖЕНИЕМ uva.jpg) ===== -->
   <section class="about" id="about">
     <div class="container about-grid">
       <div class="about-text">
         <h2>Обо мне</h2>
         <p>
-          Меня зовут <strong>Арина Ткач</strong>, и я танцую с 5 лет. 
-          Начинала с современных танцев, а сейчас моё сердце — в Hip-Hop, Girly, 
+          Меня зовут <strong>Арина Ткач</strong>, и я танцую с 7 лет. 
+          Начинала с народных танцев, а сейчас моё сердце — в Hip-Hop, Girly, 
           House и Jazz Funk.
         </p>
         <p>
@@ -649,25 +668,17 @@
             <span class="stat-label">Лет в танце</span>
           </div>
           <div class="stat-item">
-            <span class="stat-number">30+</span>
+            <span class="stat-number">25+</span>
             <span class="stat-label">Выступлений</span>
           </div>
           <div class="stat-item">
-            <span class="stat-number">20+</span>
+            <span class="stat-number">15+</span>
             <span class="stat-label">Мастер-класса</span>
           </div>
         </div>
       </div>
       <div class="about-image">
-        <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="150" cy="80" r="50" stroke="#9b87d4" stroke-width="1.2" opacity="0.3" stroke-dasharray="6 6"/>
-          <path d="M110 130 C110 100 130 85 150 85 C170 85 190 100 190 130" stroke="#c9b8ff" stroke-width="2" opacity="0.5"/>
-          <circle cx="135" cy="70" r="5" fill="#c9b8ff" opacity="0.3"/>
-          <circle cx="165" cy="70" r="5" fill="#c9b8ff" opacity="0.3"/>
-          <path d="M150 85 L150 110" stroke="#b8a5f0" stroke-width="2" opacity="0.4"/>
-          <path d="M70 40 L230 40" stroke="#9b87d4" stroke-width="0.5" opacity="0.15" stroke-dasharray="4 4"/>
-          <path d="M50 160 L250 160" stroke="#9b87d4" stroke-width="0.5" opacity="0.15" stroke-dasharray="4 4"/>
-        </svg>
+        <img src="uva.jpg" alt="Арина Ткач — танец">
       </div>
     </div>
   </section>
@@ -679,19 +690,16 @@
       <p style="color: var(--text-soft); max-width: 400px; margin: 0 auto 2rem auto;">
         Буду рада новым проектам, коллаборациям и возможности выступить.
       </p>
-      <a href="mailto:arishatkach11@gmail.com" class="contact-email">
-        <i class="fas fa-envelope"></i> arishatkach11@gmail.com
+      <a href="mailto:arina.tkach@example.com" class="contact-email">
+        <i class="fas fa-envelope"></i> arina.tkach@example.com
       </a>
       <div class="social-links">
-        <!-- Instagram -->
         <a href="https://www.instagram.com/cocoholic0_0?igsh=OXhteGQxZDVqY2g5&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
         </a>
-        <!-- Telegram -->
         <a href="https://t.me/cocaholic0_0" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
           <i class="fab fa-telegram-plane"></i>
         </a>
-        <!-- TikTok -->
         <a href="https://www.tiktok.com/@cocaholic0_0?_r=1&_t=ZS-981VVcoMpst" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
           <i class="fab fa-tiktok"></i>
         </a>
