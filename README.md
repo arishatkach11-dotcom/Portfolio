@@ -1,4 +1,3 @@
-```markdown
 # Портфолио танцора | Арина Ткач
 
 [![Сайт](https://img.shields.io/badge/Сайт-онлайн-brightgreen?style=for-the-badge)](https://arishatkach11-dotcom.github.io/Portfolio/) [![GitHub](https://img.shields.io/badge/GitHub-репозиторий-181717?style=for-the-badge&logo=github)](https://github.com/arishatkach11-dotcom/Portfolio)
@@ -72,6 +71,3 @@ Portfolio/
 ## 📄 Лицензия
 
 Этот проект является открытым и может свободно использоваться в качестве шаблона для личных портфолио.
-```
-*   **Добавьте скриншот:** Замените `link_to_your_screenshot.png` на реальную ссылку с изображением вашего сайта, чтобы визуально украсить описание.
-*   **Проверьте ссылки:** Убедитесь, что все ссылки на социальные сети и демо-сайт ведут куда нужно, когда ваш сайт снова станет доступен.
