@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Арина Ткач | Портфолио танцора</title>
-  <!-- Google Fonts: лёгкий, современный стиль -->
+  <title>Арина Ткач | Портфолио</title>
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -52,7 +52,6 @@
       padding: 0 24px;
     }
 
-    /* типографика */
     h1, h2, h3 {
       font-family: 'Playfair Display', serif;
       font-weight: 400;
@@ -174,20 +173,6 @@
       width: 100%;
     }
 
-    .hero-text .badge {
-      display: inline-block;
-      background: rgba(184, 165, 240, 0.15);
-      padding: 0.3rem 1.4rem;
-      border-radius: 40px;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--accent-lavender);
-      border: 1px solid rgba(184, 165, 240, 0.2);
-      backdrop-filter: blur(4px);
-      margin-bottom: 1rem;
-    }
-
     .hero-text h1 {
       margin-bottom: 0.3rem;
     }
@@ -259,11 +244,286 @@
       margin: 0.5rem 0 1.2rem 0;
     }
 
+    /* ===== ABOUT ===== */
+    .about {
+      padding: 5rem 0;
+      background: var(--bg-dark);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-text h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .about-text p {
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+      font-weight: 400;
+      font-size: 1.05rem;
+    }
+
+    .about-text strong {
+      color: var(--text-light);
+      font-weight: 600;
+    }
+
+    /* ===== HOBBIES ===== */
+    .hobbies {
+      padding: 5rem 0;
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .hobbies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .hobby-item {
+      background: var(--bg-card);
+      padding: 2rem 1.5rem;
+      border-radius: 28px;
+      text-align: center;
+      border: 1px solid var(--border-soft);
+      transition: var(--transition);
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+    }
+
+    .hobby-item:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent-lavender);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .hobby-item .icon {
+      font-size: 2.8rem;
+      color: var(--accent-lavender);
+      margin-bottom: 0.8rem;
+      display: inline-block;
+    }
+
+    .hobby-item h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      color: var(--text-light);
+    }
+
+    .hobby-item p {
+      color: var(--text-soft);
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+    }
+
+    /* ===== PROJECTS ===== */
+    .projects {
+      padding: 5rem 0;
+      background: var(--bg-dark);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .project-item {
+      background: var(--bg-card);
+      padding: 2rem 1.5rem;
+      border-radius: 28px;
+      text-align: center;
+      border: 1px solid var(--border-soft);
+      transition: var(--transition);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .project-item:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent-lavender);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .project-item .icon {
+      font-size: 2.8rem;
+      color: var(--accent-lavender);
+      margin-bottom: 0.8rem;
+      display: inline-block;
+    }
+
+    .project-item h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      color: var(--text-light);
+    }
+
+    .project-item p {
+      color: var(--text-soft);
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+    }
+
+    /* ===== MY SONGS ===== */
+    .my-songs {
+      padding: 5rem 0;
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .songs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .song-item {
+      background: var(--bg-card);
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      transition: var(--transition);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .song-item:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent-lavender);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .song-item a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .song-cover {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(145deg, #1f1a2e, #16121f);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .song-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .song-cover .placeholder-icon {
+      font-size: 4rem;
+      color: var(--accent-lavender);
+      opacity: 0.4;
+    }
+
+    .song-info {
+      padding: 1.5rem 1.5rem 1.8rem;
+      text-align: center;
+    }
+
+    .song-info h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      color: var(--text-light);
+    }
+
+    .song-info p {
+      color: var(--text-soft);
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+    }
+
+    /* ===== MY GAMES (ОБЛОЖКА УБРАНА) ===== */
+    .my-games {
+      padding: 5rem 0;
+      background: var(--bg-dark);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .game-item {
+      background: var(--bg-card);
+      border-radius: 28px;
+      padding: 2rem 1.5rem;
+      border: 1px solid var(--border-soft);
+      transition: var(--transition);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .game-item:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent-lavender);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .game-item a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      width: 100%;
+    }
+
+    .game-item .icon {
+      font-size: 2.8rem;
+      color: var(--accent-lavender);
+      margin-bottom: 0.8rem;
+      display: inline-block;
+    }
+
+    .game-item h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      color: var(--text-light);
+    }
+
+    .game-item p {
+      color: var(--text-soft);
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+    }
+
     /* ===== SKILLS ===== */
     .skills {
       padding: 5rem 0;
-      background: var(--bg-dark);
-      border-top: 1px solid var(--border-soft);
+      background: var(--bg-soft);
       border-bottom: 1px solid var(--border-soft);
     }
 
@@ -324,90 +584,10 @@
       margin-top: 0.6rem;
     }
 
-    /* ===== ABOUT (С ИЗОБРАЖЕНИЕМ uva.jpg) ===== */
-    .about {
-      padding: 5rem 0;
-      background: var(--bg-soft);
-      border-bottom: 1px solid var(--border-soft);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .about-text p {
-      color: var(--text-soft);
-      margin-bottom: 1rem;
-      font-weight: 400;
-      font-size: 1.05rem;
-    }
-
-    .about-text strong {
-      color: var(--text-light);
-      font-weight: 600;
-    }
-
-    .stats {
-      display: flex;
-      gap: 2.5rem;
-      margin-top: 1.8rem;
-    }
-
-    .stat-item {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .stat-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      color: var(--accent-lavender);
-      line-height: 1;
-    }
-
-    .stat-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--text-muted);
-      margin-top: 0.2rem;
-    }
-
-    /* ============================================================
-       ИЗОБРАЖЕНИЕ uva.jpg В РАЗДЕЛЕ «ОБО МНЕ»
-       НАСТРОЕНО, ЧТОБЫ НЕ ВЫХОДИТЬ ЗА РАМКИ
-       ============================================================ */
-    .about-image {
-      border-radius: 30px;
-      background: var(--bg-card);
-      min-height: 240px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--border-soft);
-      box-shadow: var(--shadow-soft);
-      padding: 0;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .about-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      border-radius: inherit;
-      display: block;
-      min-height: 240px;
-    }
-
     /* ===== CONTACT / FOOTER ===== */
     .contact {
       padding: 4rem 0 3rem;
-      background: var(--bg-dark);
+      background: var(--bg-soft);
       text-align: center;
     }
 
@@ -469,10 +649,6 @@
         text-align: center;
       }
 
-      .hero-text .badge {
-        margin: 0 auto;
-      }
-
       .hero-text .subhead {
         margin-left: auto;
         margin-right: auto;
@@ -492,47 +668,21 @@
       }
 
       .about-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
+        padding: 0 1rem;
       }
 
-      .about-text h2::after {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      .stats {
-        justify-content: center;
-      }
-
-      .section-title-center h2::after {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      }
-
-      .about-image {
-        max-height: 300px;
-      }
-
-      .about-image img {
-        min-height: 200px;
+      .skills-grid,
+      .hobbies-grid,
+      .projects-grid,
+      .songs-grid,
+      .games-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       }
     }
 
     @media (max-width: 600px) {
       .hero-text h1 {
         font-size: 2.4rem;
-      }
-
-      .stats {
-        gap: 1.5rem;
-        flex-wrap: wrap;
-        justify-content: center;
       }
 
       .btn {
@@ -544,21 +694,21 @@
         gap: 1.5rem;
       }
 
-      .skills-grid {
+      .skills-grid,
+      .hobbies-grid,
+      .projects-grid,
+      .songs-grid,
+      .games-grid {
         grid-template-columns: 1fr 1fr;
-      }
-
-      .about-image {
-        max-height: 250px;
-      }
-
-      .about-image img {
-        min-height: 180px;
       }
     }
 
     @media (max-width: 400px) {
-      .skills-grid {
+      .skills-grid,
+      .hobbies-grid,
+      .projects-grid,
+      .songs-grid,
+      .games-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -570,18 +720,17 @@
   <section class="hero" id="home">
     <div class="container hero-content">
       <div class="hero-text">
-        <span class="badge"><i class="fas fa-circle" style="font-size: 0.4rem; vertical-align: middle; margin-right: 6px; color: var(--accent-lavender);"></i> начинающий танцор</span>
         <h1>
           Ткач<br />
           <i>Арина</i>
         </h1>
         <div class="accent-line"></div>
         <p class="subhead">
-          Hip-Hop, Girly, House, Jazz Funk — свобода движения и энергия. 
-          Каждый танец — это маленькая история.
+          Танцы, музыка, творчество и книги — 
+          в этом моя вселенная. Каждый день — новое вдохновение.
         </p>
         <div class="hero-cta">
-          <a href="#skills" class="btn btn-primary"><i class="fas fa-star"></i> Мои навыки</a>
+          <a href="#hobbies" class="btn btn-primary"><i class="fas fa-heart"></i> Мои хобби</a>
           <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Контакты</a>
         </div>
       </div>
@@ -593,11 +742,150 @@
     </div>
   </section>
 
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h2>Обо мне</h2>
+        <p>
+          Меня зовут <strong>Арина Ткач</strong>, и я живу в мире творчества и вдохновения. 
+          Танцы — моя главная страсть, но я также обожаю музыку, чтение, работу над проектами 
+          и всё, что связано с созиданием.
+        </p>
+        <p>
+          Собираю LEGO и алмазные мозаики, слушаю музыку от классики до хип-хопа, 
+          увлекаюсь фэнтези, детективами и романтикой. Постоянно ищу новые идеи 
+          и способы их воплощения.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOBBIES ===== -->
+  <section class="hobbies" id="hobbies">
+    <div class="container">
+      <div class="section-title-center">
+        <h2>Мои хобби</h2>
+        <p style="color: var(--text-muted); margin-top: 0.3rem;">Чем я вдохновляюсь и увлекаюсь</p>
+      </div>
+      <div class="hobbies-grid">
+        <div class="hobby-item">
+          <div class="icon"><i class="fas fa-music"></i></div>
+          <h3>Музыка</h3>
+          <p>Я меломан, слушаю любую музыку — от классики до хип-хопа, это мой источник вдохновения.</p>
+        </div>
+        <a href="#projects" style="text-decoration: none; display: block;">
+          <div class="hobby-item">
+            <div class="icon"><i class="fas fa-tasks"></i></div>
+            <h3>Проекты</h3>
+            <p>Люблю планировать и создавать что-то новое, от идей до реализации.</p>
+          </div>
+        </a>
+        <div class="hobby-item">
+          <div class="icon"><i class="fas fa-book"></i></div>
+          <h3>Чтение</h3>
+          <p>Увлекаюсь фэнтези, детективами и романтикой — каждая книга открывает мир.</p>
+        </div>
+        <div class="hobby-item">
+          <div class="icon"><i class="fas fa-puzzle-piece"></i></div>
+          <h3>Творчество</h3>
+          <p>Собираю LEGO и алмазные мозаики — это помогает расслабиться и творить.</p>
+        </div>
+        <a href="#skills" style="text-decoration: none; display: block;">
+          <div class="hobby-item">
+            <div class="icon"><i class="fas fa-star"></i></div>
+            <h3>Танцы</h3>
+            <p>Моя главная страсть — танцевать, развиваться и вдохновлять других.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-title-center">
+        <h2>Мои проекты</h2>
+        <p style="color: var(--text-muted); margin-top: 0.3rem;">То, над чем я работаю</p>
+      </div>
+      <div class="projects-grid">
+        <a href="#my-songs" style="text-decoration: none; display: block;">
+          <div class="project-item">
+            <div class="icon"><i class="fas fa-music"></i></div>
+            <h3>Песни</h3>
+            <p>Мои авторские треки, в которых я делюсь эмоциями и историями.</p>
+          </div>
+        </a>
+        <a href="#my-games" style="text-decoration: none; display: block;">
+          <div class="project-item">
+            <div class="icon"><i class="fas fa-gamepad"></i></div>
+            <h3>Игры</h3>
+            <p>Мои игровые проекты и концепции.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MY SONGS ===== -->
+  <section class="my-songs" id="my-songs">
+    <div class="container">
+      <div class="section-title-center">
+        <h2>Мои песни</h2>
+        <p style="color: var(--text-muted); margin-top: 0.3rem;">Авторские треки, которые рождаются из вдохновения</p>
+      </div>
+      <div class="songs-grid">
+        <a href="https://suno.com/s/G0omqNojaCEn7XmB" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div class="song-item">
+            <div class="song-cover">
+              <img src="boss-in-a-dress-cover.jpg" alt="Обложка Boss in a Dress">
+            </div>
+            <div class="song-info">
+              <h3>Boss in a Dress</h3>
+              <p>Уверенный и дерзкий трек о силе, стиле и женской энергии.</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://suno.com/s/EZ3foOjZRUhXKqNf" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div class="song-item">
+            <div class="song-cover">
+              <img src="ulybnis-cover.jpg" alt="Обложка Улыбнись, это мы">
+            </div>
+            <div class="song-info">
+              <h3>Улыбнись, это мы</h3>
+              <p>Тёплая и искренняя песня о моментах, которые мы разделяем с близкими.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MY GAMES (ОБЛОЖКА УБРАНА) ===== -->
+  <section class="my-games" id="my-games">
+    <div class="container">
+      <div class="section-title-center">
+        <h2>Мои игры</h2>
+        <p style="color: var(--text-muted); margin-top: 0.3rem;">Проекты, над которыми я работаю</p>
+      </div>
+      <div class="games-grid">
+        <a href="file:///C:/Users/Fred/Desktop/AI/game/index.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div class="game-item">
+            <div class="icon"><i class="fas fa-puzzle-piece"></i></div>
+            <h3>Судоку</h3>
+            <p>Классическая головоломка с числами. Разрабатываю собственную версию с уникальным дизайном.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== SKILLS ===== -->
   <section class="skills" id="skills">
     <div class="container">
       <div class="section-title-center">
-        <h2>Мои навыки</h2>
+        <h2>Мои навыки в танцах</h2>
         <p style="color: var(--text-muted); margin-top: 0.3rem;">Чему я учусь и что уже умею</p>
       </div>
       <div class="skills-grid">
@@ -647,48 +935,13 @@
     </div>
   </section>
 
-  <!-- ===== ABOUT (С ИЗОБРАЖЕНИЕМ uva.jpg) ===== -->
-  <section class="about" id="about">
-    <div class="container about-grid">
-      <div class="about-text">
-        <h2>Обо мне</h2>
-        <p>
-          Меня зовут <strong>Арина Ткач</strong>, и я танцую с 7 лет. 
-          Начинала с народных танцев, а сейчас моё сердце — в Hip-Hop, Girly, 
-          House и Jazz Funk.
-        </p>
-        <p>
-          Участвую в командных конкурсах, импровизации и подтанцовках. 
-          Для меня танец — это способ говорить с миром без слов, выражать эмоции 
-          и вдохновлять. Постоянно развиваю свои навыки на мастер-классах.
-        </p>
-        <div class="stats">
-          <div class="stat-item">
-            <span class="stat-number">10+</span>
-            <span class="stat-label">Лет в танце</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">25+</span>
-            <span class="stat-label">Выступлений</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">15+</span>
-            <span class="stat-label">Мастер-класса</span>
-          </div>
-        </div>
-      </div>
-      <div class="about-image">
-        <img src="uva.jpg" alt="Арина Ткач — танец">
-      </div>
-    </div>
-  </section>
-
   <!-- ===== CONTACT / FOOTER ===== -->
   <section class="contact" id="contact">
     <div class="container">
-      <h2 style="margin-bottom: 0.3rem;">Давайте танцевать</h2>
+      <h2 style="margin-bottom: 0.3rem;">Давайте создавать</h2>
       <p style="color: var(--text-soft); max-width: 400px; margin: 0 auto 2rem auto;">
-        Буду рада новым проектам, коллаборациям и возможности выступить.
+        Ищете вдохновение для проекта, музыки или творчества? 
+        Я всегда открыта к новым идеям и коллаборациям.
       </p>
       <a href="mailto:arishatkach11@gmail.com" class="contact-email">
         <i class="fas fa-envelope"></i> arishatkach11@gmail.com
