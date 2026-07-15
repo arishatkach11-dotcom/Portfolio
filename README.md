@@ -1,6 +1,11 @@
 # Портфолио | Арина Ткач
 
-[![Сайт](https://img.shields.io/badge/Сайт-онлайн-brightgreen?style=for-the-badge)](https://arishatkach11-dotcom.github.io/Portfolio/) [![GitHub](https://img.shields.io/badge/GitHub-репозиторий-181717?style=for-the-badge&logo=github)](https://github.com/arishatkach11-dotcom/Portfolio)
+[![Сайт](https://img.shields.io/badge/Сайт-онлайн-brightgreen?style=for-the-badge&logo=google-chrome)](https://arishatkach11-dotcom.github.io/Portfolio/)
+[![GitHub](https://img.shields.io/badge/GitHub-репозиторий-181717?style=for-the-badge&logo=github)](https://github.com/arishatkach11-dotcom/Portfolio)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#)
+[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white)](#)
+[![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=google-fonts&logoColor=white)](#)
 
 Одностраничный сайт-портфолио, созданный для творческого человека. Проект представляет собой современный, адаптивный лендинг с тёмной темой, который акцентирует внимание на увлечениях, навыках и творческом пути.
 
